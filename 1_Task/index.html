@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт з програмування</title>
+    <style>
+        body {
+            word-wrap: break-word;
+            font-family: Times New Roman, sans-serif;
+            padding: 0;
+            background-size: cover; /* збільшити / зменшити розмір, щоб покрити весь екран */
+            background-position: center; /* центрувати зображення на екрані */
+            background-repeat: no-repeat; /* не повторювати зображення */
+            height: 100vh; /* встановити висоту на весь екран */
+            margin: 0; /* видалити відступи */
+            color: white; /* колір тексту на задньому фоні */
+            font-size: 20px; /* розмір шрифту тексту на задньому фоні */  
+        }
+        
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/124.jpg'); /* Замініть на шлях до вашого другого файлу */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1; /* Забезпечте, що другий фон знаходиться під першим */
+            color: purple; /* колір тексту на задньому фоні */
+            font-size: 20px;
+        }
+
+        header {
+            background-color: #666;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .menu-bar {
+            background-color: #666;
+            width: 50px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            box-sizing: border-box;
+        }
+
+        .menu-button {
+            background-color: #666;
+            width: 50px;
+            height: 57px;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .menu-button:active {
+            background-color: red;
+            transform: scale(0.95);
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 80%;
+            left: 100;
+            transform: translateY(-50%) rotate(270deg);
+        }
+
+        .social-link {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s;
+            white-space: nowrap;
+            display: block;
+            margin-bottom: 10px;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        .social-link:hover {
+            color: #f1f1f1;
+        }
+
+        nav {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: #555;
+            width: 150px;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .content {
+            padding: 20px;
+            margin-left: 60px;
+        }
+
+        .blue-block {
+            background-color: purple;
+            padding: 20px;
+            color: white;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-align: justify;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        
+        .image-container{
+            text-align: center;
+        }
+        
+        footer{
+            background-color: #666;
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="menu-bar">
+        <div class="social-links">
+            <a class="social-link" href="#" target="_blank">Facebook</a>
+            <a class="social-link" href="#" target="_blank">Instagram</a>
+            <a class="social-link" href="#" target="_blank">Telegram</a>
+        </div>
+        <button class="menu-button" onclick="toggleNav()">☰</button>
+    </div>
+    <h1 style="margin: 0;">Сайт з програмування</h1>
+</header>
+
+<nav id="sideNav">
+    <a href="index.html" onclick="changePage('home')">Головна</a>
+    <a href="Tecnologii.html" onclick="changePage('technologies')">Технології</a>
+    <a href="contact.html" onclick="changePage('contact')">Контакти</a>
+</nav>
+
+<div class="content" id="mainContent">
+    <h1>Привіт!</h1>
+    <h2>Вітаю вас на сайті: Бітова Епоха: Від Античності до Алгоритмів</h2>
+    <div class="blue-block">
+        <h3>Ідея створення сайту</h3>
+        
+        <p>Я завжди був захопленим історією, особливо тією, що пов'язана з розвитком технологій та комп'ютерною наукою. Його цікавило, як людство перейшло від простих механічних пристроїв до потужних комп'ютерів, які визначають сучасний світ.</p>
+
+        <p>Я працював програмістом і завжди шукав нові способи вдосконалення своїх навичок. Одного дня, в різних книгах, я натрапив на різні цікаві факти та історії про розвиток програмування та комп'ютерної техніки. Світ інформації про цю тему був розсіяний і розпорошений.</p>
+
+        <p>Вразившись цією ідеєю, я вирішив об'єднати всю цю цінну інформацію на одному зручному веб-ресурсі. Його мета - створити місце, де студенти, професіонали, та всі зацікавлені могли дізнатися більше про історію своєї галузі, ділитися знаннями та знаходити натхнення в подорожі в минуле та майбутнє технологій.</p>
+
+        <p>Так народився ідеальний сайт "Бітова Епоха", який об'єднав історію програмування та комп'ютера в одному місці. Спочатку це було місце для мене виражати свою страсть і навчатися, але з часом воно стало інтерактивним інформаційним центром для всіх, хто бажав розгортати сторінки історії та вивчати переплетені нитки технологічного розвитку.</p>
+        
+        <div class="image-container">
+            <img src="Images/125.jpg" alt="Изображение 2">
+        </div>
+        
+    </div>
+</div>
+    
+    
+
+<script>
+    function toggleNav() {
+        var nav = document.getElementById("sideNav");
+        nav.style.display = (nav.style.display === "block") ? "none" : "block";
+    }
+
+    function changePage(page) {
+        var content = document.getElementById("mainContent");
+        if (page === 'home') {
+            content.innerHTML = "<h2>Головна</h2><p>Ласкаво просимо на наш сайт з програмування!</p>";
+        } else if (page === 'technologies') {
+            content.innerHTML = "<h2>Технології</h2><p>Дізнайтеся про останні технологічні рішення та мови програмування.</p>";
+        } else if (page === 'news') {
+            content.innerHTML = "<h2>Новини</h2><p>Останні новини зі світу програмування та ІТ-індустрії.</p>";
+        } else if (page === 'contact') {
+            content.innerHTML = "<h2>Контакти</h2><p>Зв'яжіться з нами для отримання додаткової інформації.</p>";
+        }
+
+        // Закриваємо меню після
+        var nav = document.getElementById("sideNav");
+        nav.style.display = "none";
+    }
+</script>
+
+    <footer>
+        <p>&copy; 2023 Сайт з програмування. Усі права захищені.</p>
+    </footer>
+    
+</body>
+</html>

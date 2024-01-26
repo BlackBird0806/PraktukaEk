@@ -1,0 +1,129 @@
+body {
+    word-wrap: break-word;
+    font-family: 'Times New Roman', sans-serif;
+    padding: 0;
+    margin: 0; /* видалити відступи */
+    background-size: cover; /* збільшити / зменшити розмір, щоб покрити весь екран */
+    background-position: center; /* центрувати зображення на екрані */
+    background-repeat: no-repeat; /* не повторювати зображення */
+    height: 100vh; /* встановити висоту на весь екран */
+    color:white;
+    font-size: 20px;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/image/2.jpg"); /* Замініть на шлях до вашого другого файлу */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 28px;
+    text-align: center;
+}
+
+nav {
+    background-color: green;
+    position: sticky;
+    font-size: 25px;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+
+    color: white;      
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 1500px;        
+    margin-top: 20px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.center-image {
+    text-align: center;
+}
+
+.center-image img {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.zagolovok {
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.8em;
+    padding: 10px;
+}
+
+.Table1 {
+    padding: 20px;
+}
+
+table {
+    background-color: silver;
+    font-family: 'Times New Roman', sans-serif;
+    word-wrap: break-word;
+    color: black;
+    padding: 10px;
+    width: 80%; /* Set the width to 70% */
+    margin: 0 auto; /* Center the table on the page */
+    border-collapse: collapse;
+    border: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: aqua;
+}
+
+.social-link{
+    padding: 10px;
+}
